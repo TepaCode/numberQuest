@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Quest</title>
+    <script src="codeNQ.js" defer></script>
+    <!--"defer" Set to query selector from js. work correctly-->
+    <link rel="stylesheet" href="stylesNQ.css">
+</head>
+<body>
+    <header>
+        <h1>Alura | Course | Logica de programacion | Jorge Tepayol</h1>
+    </header>
+    <section class="number__quest">   
+        <h2>Hello world, this is the number Quest!</h2>
+        
+        <span class="start__message"></span>
+        <input id="userInputNumber" type="number" placeholder="Set a number between 1 to 10">
+        <span class="ending__message"></span>
+        <span class="attempsCounter"></span>
+        <div>
+            <button onclick="compareNumbers()" class="input__button" name="casillaGame">Intentar</button>
+            <button onclick="reloadGame()" id="reloadButton" disabled>Una vez mas</button>
+        </div>
+    </section>
+
+
+
+    <section>
+        <h2>Desafios Nivel 1</h2>
+        <p>1. Crear una función que muestre "¡Hola, mundo!" en la consola.</p>
+            <button onclick="saludarMundo()" id="buton01">Ejecutar</button>
+        <p>2. Crear una función que reciba un nombre como parámetro y muestre "¡Hola, [nombre]!" en la consola.</p>
+            <button onclick="saludarNombre()" id="buton02">Ejecutar</button>
+        <p>3. Crear una función que reciba un número como parámetro y devuelva el doble de ese número.</p>
+            <button onclick="doubleNumber()" id="buton03">Ejecutar</button>
+        <p>4. Crear una función que reciba tres números como parámetros y devuelva su promedio.</p>
+            <input id="inputDesa01" type="number" placeholder="Ingresa el primer numero:">
+            <input id="inputDesa02" type="number" placeholder="Ingresa el segundo numero:">
+            <input id="inputDesa03" type="number" placeholder="Ingresa el tercer numero:">
+            <button onclick="tripleNumber()" id="buton04">Ejecutar</button>
+        <p>5. Crear una función que reciba dos números como parámetros y devuelva el mayor de ellos.</p>
+            <input id="inputDesa04" type="number" placeholder="Ingresa el primer numero:">
+            <input id="inputDesa05" type="number" placeholder="Ingresa el segundo numero:">
+            <button onclick="compareTwoNumbers()" id="buton05">Ejecutar</button>
+        <p>6. Crear una función que reciba un número como parámetro y devuelva el resultado de multiplicar ese número por sí mismo.</p>
+            <input id="inputDesa06" type="number" placeholder="Ingresa un numero:">
+            <button onclick="multiplyNumbers()" id="buton06">Ejecutar</button>
+    </section>
+
+    <section>
+        <h2>Desafios Nivel 2</h2>
+        <p>1. Crea una función que calcule el índice de masa corporal (IMC) de una persona a partir de su altura en metros y peso en kilogramos, que se recibirán como parámetros.</p>
+            <input id="dataUser01" type="number" placeholder="Ingresa tu peso (kg)">
+            <input id="dataUser02" type="number" placeholder="Ingresa tu altura(mt)">
+            <button onclick="calculateIMC()">Calcular IMC</button>
+            <span id="resultingIMC">______</span>
+        <p>2. Crea una función que calcule el valor del factorial de un número pasado como parámetro.</p>
+            <input id="dataUser03" type="number" placeholder="Ingresa un numero">
+            <button onclick="calculateFactorial()">Factorial</button>
+            <span id="resultingFactorial">______</span>
+        <p>3. Crea una función que convierta un valor en dólares, pasado como parámetro, y devuelva el valor equivalente en reales(moneda brasileña,si deseas puedes hacerlo con el valor del dólar en tu país). Para esto, considera la cotización del dólar igual a R$4,80.</p>
+            <input id="dataUser04" type="number" placeholder="Cantidad en Dolares">
+            <button onclick="translateToPesosMXN()">Convertir a Pesos MXN</button>
+            <span id="resultingPesos">______</span>
+        <p>4. Crea una función que muestre en pantalla el área y el perímetro de una sala rectangular, utilizando la altura y la anchura que se proporcionarán como parámetros.</p>
+            <input id="dataUser05" type="number" placeholder="Largo">
+            <input id="dataUser06" type="number" placeholder="Ancho">
+            <button onclick="calculateAreaPeri()">Calcular</button>
+            <span id="resultingArea">______</span>
+            <span id="resultingPerimetro">______</span>
+
+        <p>5. Crea una función que muestre en pantalla el área y el perímetro de una sala circular, utilizando su radio que se proporcionará como parámetro. Considera Pi = 3,14.</p>
+            <input id="dataUser07" type="number" placeholder="Radio de circulo">
+            <button onclick="calculateCircle()">Calcular</button>
+            <span id="resultingAreaCircle">______</span>
+            <span id="resultingPerimetroCircle">______</span>
+        <p>6. Crea una función que muestre en pantalla la tabla de multiplicar de un número dado como parámetro.</p>
+            <input id="dataUser08" type="number" placeholder="Ingresa un numero">
+            <button onclick="multiplyTable()">Generar Tabla</button>
+            
+    </section>
+
+    <section>
+        <h2>Desafios Nivel 3</h2>
+    <p>1. Crea una lista vacía llamada "listaGenerica".</p>
+        <button onclick="alertListaVacia()">Mostrar en consola</button>
+    <p>2. Crea una lista de lenguajes de programación llamada "lenguagesDeProgramacion con los siguientes elementos: 'JavaScript', 'C', 'C++', 'Kotlin' y 'Python'.</p>
+        <button onclick="alertLenguajes()">Lenguajes de Programacion</button>
+    <p>3. Agrega a la lista "lenguagesDeProgramacion los siguientes elementos: 'Java', 'Ruby' y 'GoLang'.</p>
+    <button onclick="agregarLenguajes()">Agregar a lista</button>    
+    <p>4. Crea una función que muestre en la consola todos los elementos de la lista "lenguagesDeProgramacion.</p>
+        <button onclick="verListaConsola()">Ver en consola</button>
+    <p>5. Crea una función que muestre en la consola todos los elementos de la lista "lenguagesDeProgramacion en orden inverso.</p>
+        <button onclick="verListaInversa()">Ver lista inversa</button>
+    <p>6. Crea una función que calcule el promedio de los elementos en una lista de números.</p>
+        <ul> Lista de numeros:
+            <li>7</li>
+            <li>10</li>
+            <li>9</li>
+            <li>8</li>
+            <li>6</li>
+            <li>8</li>
+        </ul>
+        <button onclick="listaCalcularPromedio()">Calcular Promedio</button>
+    <p>7. Crea una función que muestre en la consola el número más grande y el número más pequeño en una lista.</p>
+        <button onclick="mostrarMaxMin()">Mostrar Maximo y minimo</button>
+    <p>8. Crea una función que devuelva la suma de todos los elementos en una lista.</p>
+        <button onclick="sumaLista()">Sumar Elementos de lista</button>
+    <p>9. Crea una función que devuelva la posición en la lista donde se encuentra un elemento pasado como parámetro, o -1 si no existe en la lista.</p>
+        <input type="number" placeholder="Ingresar numero" id="dataUser09">
+        <button onclick="posicionLista()">Mostrar posicion en array</button>
+        <span class="positionInputArray"></span>
+        
+    <p>10. Crea una función que reciba dos listas de números del mismo tamaño y devuelva una nueva lista con la suma de los elementos uno a uno.</p>
+        <button onclick="sumarDosListas()">Sumar Listas</button>
+    <p>11. Crea una función que reciba una lista de números y devuelva una nueva lista con el cuadrado de cada número.</p>
+        <button onclick="cuadradoLista()">Calcular cuadrado</button>
+    </section>
+
+
+    <footer>
+        <ul>
+            <li>linked in</li>
+            <li>Alura</li>
+            <li>Discord</li>
+            <li>GitHub</li>
+            <li>Trello</li>
+        </ul>
+    </footer>
+
+</body>
+</html>
